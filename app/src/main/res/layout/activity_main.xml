@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- Background -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/stadium"
+            android:scaleType="centerCrop">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#40000000" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:gravity="center">
+                <!-- Osasuna Logo -->
+                <ImageView
+                    android:id="@+id/iv_logo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/logo_osasuna"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Club Name Title -->
+                <TextView
+                    android:id="@+id/tv_club_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray"
+                    android:text="@string/club_name"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:textColor="@android:color/white"
+                    android:shadowColor="#80000000"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="4" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="0dp"
+            app:cardBackgroundColor="@color/light_red"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+            <!-- Club Description -->
+            <TextView
+                android:id="@+id/tv_club_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/club_description"
+                android:textSize="13sp"
+                android:textColor="@android:color/black"
+                android:padding="16dp"
+                android:lineSpacingExtra="2dp"
+                android:textStyle="bold|italic" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Menu Options -->
+        <LinearLayout
+            android:id="@+id/linear_layout_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/layout_club_history"
+                layout="@layout/layout_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"/>
+
+            <include
+                android:id="@+id/layout_head_coach"
+                layout="@layout/layout_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"/>
+
+            <include
+                android:id="@+id/layout_team_squad"
+                layout="@layout/layout_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

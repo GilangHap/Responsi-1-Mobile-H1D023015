@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".ClubHistoryActivity">
+
+    <!-- Club Photo -->
+    <ImageView
+            android:id="@+id/iv_club_photo"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/club"
+            android:scaleType="centerCrop" />
+
+        <!-- Club Name Title -->
+        <TextView
+            android:id="@+id/tv_club_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/club_name"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:background="@android:color/white" />
+
+    <!-- History Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                android:id="@+id/tv_history_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/club_history_detail"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:lineSpacingExtra="4dp"
+                android:justificationMode="inter_word" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
